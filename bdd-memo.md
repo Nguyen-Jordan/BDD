@@ -45,3 +45,21 @@
 ## Pour un MLD (Modèle Logique de Données) :
 - **Comment passer d'un MCD au MLD ? Que deviennent les associations ?**
     - Pour passer d'un Modèle Conceptuel de Données (MCD) à un Modèle Logique de Données (MLD), il est nécessaire de traduire les entités, les associations et les attributs du MCD en tables, relations et attributs dans le MLD. Les associations dans le MCD sont transformées en clés étrangères dans le MLD pour représenter les relations entre les tables. 
+
+
+## 1.2 — Mise en pratique MCD et MLD
+
+## MCD
+![MCD of tweet](./MCD_1-2.png)
+
+## MCD
+![MLD of tweet](./MLD_1-2.png)
+
+## 1.3 — Mise en pratique avec le dataset du module : le prix des
+stations essence
+
+## MCD
+![MCD of gas station](./Gas_station_MCD.png)
+
+## MCD
+![MLD of gas station](./Gas_station_MLD.png)
