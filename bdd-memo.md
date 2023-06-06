@@ -63,3 +63,75 @@ stations essence
 
 ## MCD
 ![MLD of gas station](./Gas_station_MLD.png)
+
+## 2.1 — Initiation au SQL 1h — Présentiel
+À l’aide des ressources, complétez votre fichier mémo avec la réponse à ces questions :
+- **Comment créer une base de données ?**
+  - Il faut choisir un système de gestion de base de données (SGBD). Puis le processus de création peut varier
+  en fonction du SGBD que vous utilisez, mais généralement, vous pouvez utiliser une interface graphique
+  (par exemple, phpMyAdmin pour MySQL) ou une ligne de commande (par exemple, SQL CREATE DATABASE). 
+- **Comment faire un commentaire ?**
+  - Dans le SQL avec "--" puis le texte.
+- **Comment créer une table et des colonnes ?**
+  - Pour créer une table et des colonnes, on utilise la commande CREATE TABLE puis le nom de la table,
+  par la suite entre les parentheses, on spécifie le nom de la colonne et le type de donnée et on les sépare par de virgules.
+- **Listez les types de données que vous utiliserez le plus souvent.**
+  - INT (chiffre entier), FLOAT (chiffre décimaux), CHAR ou VARCHAR (chaîne de caractères de longueur fixe),
+  DATE (date en format AAAA-MM-DD), DATETIME ou TIMESTAMP (date et une heure spécifiques), BOOLEAN (valeur 0 ou 1)...
+- **Listez des contraintes utiles pour vos colonnes :**
+  - **comment préciser qu'une valeur est obligatoire pour une colonne ?**
+    - On utilise la contrainte NOT NULL.
+  - **comment définir l'id d'une table ?**
+    - On utilise la clause PRIMARY KEY.
+- **Comment préciser que la valeur d'une colonne doit être unique ?(pour une adresse email par
+  exemple)**
+  -  On utilise la clause UNIQUE.
+- **Comment insérer des données dans une table ?**
+- on utilise la commande SQL INSERT INTO puis le nom de la table, ensuite entre parenthèses les colonnes,
+ensuite VALUES et entre parenthèses la valeur de chaque colonne
+- **Comment récupérer les données insérées ?**
+  - On utilise la commande SQL SELECT puis *.
+- **Comment ne sélectionner qu'un certain nombre de résultats ?**
+  - On utilise la commande SQL SELECT puis la colonne, ensuite FROM et le nom de la table.
+- **Comment trier les résultats ?**
+  - On utilise la clause ORDER BY puis le nom de la colonne et ASC (ordre croissant) et DESC (décroissant).
+- **Comment filtrer les données et chaîner les conditions de filtres ?**
+  - On utilise la clause WHERE et les opérateurs logiques AND et OR.
+- **Comment filtrer une colonne avec une valeur commençant par un certain caractère ?**
+  - On utilise la clause WHERE puis la colonne, ensuite LIKE puis entre guillemets % et le caractère.
+- **A quoi servent les INDEX ? Comment en créer ?**
+  - Les INDEX sont utilisés en SQL pour améliorer les performances des requêtes en accélérant
+  la recherche et la récupération de données dans une table.
+  - Pour créer un INDEX, on utilise la commande SQL CREATE INDEX
+puis le nom de l'index ON puis le nom de la table et entre parentheses les colonnes.
+- **Comment créer une relation entre 2 tables ?**
+  - On utilise les clés étrangères (foreign keys). Pour la specifier :
+  FOREIGN KEY (nom_colonne_dans_la_table) REFERENCES nom_de_la_table(id),
+- **Comment sélectionner les données de plusieurs tables ?**
+  - On utilise la clause JOIN qui permet de combiner les enregistrements de deux ou plusieurs tables
+  en fonction d'une condition de jointure spécifiée.
+    Il existe différents types de jointures que l'on peut utiliser, notamment INNER JOIN,
+  LEFT JOIN, RIGHT JOIN, et FULL JOIN, selon la logique de combinaison souhaitée entre les tables.
+- **Comment ne sélectionner que certaines colonnes et les renommer dans la liste de résultats ?**
+  - On utilise la clause SELECT avec l'alias de la colonne qui permet de donner un nom alternatif
+  à une colonne dans les résultats de la requête.
+- **Comment supprimer une table et une base de données ?**
+  - On utilise la commande DROP TABLE puis le nom de la table ou
+  DROP DATABASE et le nom de la base de données.
+
+## SQLite
+**SQLite** est une bibliothèque logicielle open source qui offre un système de gestion de base de données relationnelles
+(RDBMS) sans serveur. Contrairement à d'autres systèmes de gestion de base de données tels que MySQL ou PostgreSQL, 
+SQLite ne fonctionne pas en tant que serveur de base de données autonome nécessitant une installation et 
+une configuration distinctes. Au lieu de cela, SQLite est implémenté en tant que bibliothèque liée dynamiquement qui 
+peut être intégrée directement dans des applications et des systèmes.
+
+SQLite se distingue par sa légèreté et sa rapidité, ce qui le rend adapté aux applications et aux appareils ayant
+des ressources limitées. Il est écrit en langage C et offre un large éventail de fonctionnalités de base de données. 
+SQLite stocke les données dans un fichier unique, ce qui facilite la portabilité et la sauvegarde des bases de données. 
+Il prend en charge le langage SQL standard, permet la création de tables, l'insertion, la mise à jour et la suppression 
+de données, ainsi que des fonctionnalités avancées telles que les jointures, les transactions ACID 
+(Atomicité, Cohérence, Isolation, Durabilité), les index et les déclencheurs.
+
+En raison de sa simplicité et de sa portabilité, SQLite est largement utilisé dans une variété d'applications, 
+y compris les systèmes embarqués, les applications mobiles, les navigateurs web, les logiciels de bureau et bien d'autres.
