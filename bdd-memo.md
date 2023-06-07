@@ -135,3 +135,25 @@ de données, ainsi que des fonctionnalités avancées telles que les jointures, 
 
 En raison de sa simplicité et de sa portabilité, SQLite est largement utilisé dans une variété d'applications, 
 y compris les systèmes embarqués, les applications mobiles, les navigateurs web, les logiciels de bureau et bien d'autres.
+
+## Les différents SGBD
+
+1. **Key-value Databases** (Redis & Memcached)
+  - *TRADEOFF* : FAST / NO QUERIES
+  - *BEST FOR* : caching, PUB/SUB & LEADERBOARDS
+2. **Wide Column** (Cassandra, Apache HBase)
+   - *TRADEOFF* : SCHEMA-LESS / WITHOUT JOINS 
+   - *BEST FOR* : time-series, historical records & high-write, low-read 
+3. **Document Databases** (MongoDB, Firestore, CouchDB)
+   - *TRADEOFF* : SCHEMA-LESS / RELATIONAL-ISH QUERIES / WITHOUT JOINS
+   - *BEST FOR* : most apps, games & IOT
+   - *NOT IDEAL FOR* : Graphs
+4. **Relational Databases** (MySQL, Postgres, SQL Server, CockroachDB)
+   - *BEST FOR* : most apps
+   - *NOT IDEAL FOR* : Unstructured data
+5. **Graph Databases** (Neo4j, DGraph, Janus Graph)
+   - *BEST FOR* : Graphs, knowledge graphs & recommendation engines
+6. **Search Databases** (ElasticSearch, Algolia, MeiliSearch)
+  - *BEST FOR* : search engines & typeahead
+7. **Multi-model Databases** (FaunaDB, CosmosDB)
+   - *BEST FOR* : everything
